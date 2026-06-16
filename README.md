@@ -3,6 +3,10 @@
 A free, open source QR code generator. No paywalls, no sign-up, no tracking,
 no "upgrade to download" — just a link in, a QR code out.
 
+## Linke to live site
+
+https://rogier02.github.io/nxgenqr/
+
 ## Why
 
 Most QR code generators you find online gate basic features (high-res
