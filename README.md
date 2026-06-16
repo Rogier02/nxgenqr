@@ -69,6 +69,7 @@ details. "QR Code" is a registered trademark of DENSO WAVE INCORPORATED.
 
 ## Contributing
 
-Issues and pull requests are welcome once this is pushed up to GitHub —
-it's a small, deliberately simple codebase, so it should be easy to read
-end to end before changing anything.
+Issues and pull requests are welcome at
+[github.com/Rogier02/nxgenqr](https://github.com/Rogier02/nxgenqr) — it's
+a small, deliberately simple codebase, so it should be easy to read end
+to end before changing anything.
