@@ -1,0 +1,14 @@
+NXGenQR
+Copyright 2026 Rogier Goossens
+
+This product is licensed under the Apache License, Version 2.0.
+See the LICENSE file for the full license text.
+
+This product bundles the following third-party software:
+
+- qrcode-generator (js/vendor/qrcode-generator.js)
+  Copyright (c) 2009 Kazuhiko Arase
+  Licensed under the MIT License: http://www.opensource.org/licenses/mit-license.php
+  https://github.com/kazuhikoarase/qrcode-generator
+
+  "QR Code" is a registered trademark of DENSO WAVE INCORPORATED.

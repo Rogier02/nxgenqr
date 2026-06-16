@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NXGenQR — Free, Open Source QR Code Generator</title>
+  <meta name="description" content="A free, open source QR code generator. No paywalls, no sign-up, no tracking. Generate a QR code and download it in the size and file type you need." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <main class="page">
+    <header class="intro">
+      <h1>NXGenQR</h1>
+      <p class="tagline">A free, open source QR code generator. No paywalls. No sign-up. No tracking.</p>
+    </header>
+
+    <section class="card">
+      <form id="qr-form" novalidate>
+        <label for="qr-input">Link or text</label>
+        <input
+          id="qr-input"
+          name="qr-input"
+          type="text"
+          inputmode="url"
+          placeholder="https://example.com"
+          autocomplete="off"
+          autocapitalize="off"
+          spellcheck="false"
+        />
+        <p id="qr-error" class="error" role="alert" hidden></p>
+        <button type="submit" class="primary-button">Generate QR Code</button>
+      </form>
+    </section>
+
+    <section id="qr-result" class="card result" hidden>
+      <div class="preview">
+        <canvas id="qr-canvas" width="512" height="512" aria-label="Generated QR code preview"></canvas>
+      </div>
+
+      <div class="sizes">
+        <p class="section-label">Size</p>
+        <div class="size-options" role="group" aria-label="QR code size">
+          <button type="button" class="size-option" data-size="small" aria-pressed="false">Small<span>256×256</span></button>
+          <button type="button" class="size-option active" data-size="medium" aria-pressed="true">Medium<span>512×512</span></button>
+          <button type="button" class="size-option" data-size="large" aria-pressed="false">Large<span>1024×1024</span></button>
+          <button type="button" class="size-option" data-size="xlarge" aria-pressed="false">X-Large<span>2048×2048</span></button>
+        </div>
+      </div>
+
+      <div class="downloads">
+        <p class="section-label">Download</p>
+        <div class="download-grid">
+          <button type="button" class="download-button" data-format="png">
+            <strong>PNG</strong>
+            <span>General use, web, transparent-friendly</span>
+          </button>
+          <button type="button" class="download-button" data-format="svg">
+            <strong>SVG</strong>
+            <span>Vector — best for print &amp; large posters</span>
+          </button>
+          <button type="button" class="download-button" data-format="jpeg">
+            <strong>JPG</strong>
+            <span>Smaller file, widest compatibility</span>
+          </button>
+          <button type="button" class="download-button" data-format="webp">
+            <strong>WebP</strong>
+            <span>Modern, smallest file size</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      Donations are intentionally built but hidden for now.
+      To launch this, flip FEATURES.donations to true in js/app.js
+      and remove the `hidden` attribute below stays in sync automatically.
+    -->
+    <section id="donate-section" class="card donate" hidden>
+      <h2>Support free, open source tools</h2>
+      <p>If NXGenQR (or other free tools like it) saved you a paywall, consider chipping in so they stay free for everyone.</p>
+      <button type="button" class="primary-button" disabled>Donate (coming soon)</button>
+    </section>
+
+    <footer class="site-footer">
+      <p>
+        NXGenQR is free and open source software, licensed under
+        <a href="LICENSE">Apache-2.0</a>. Your link is encoded entirely in
+        your browser — nothing is uploaded or stored anywhere.
+      </p>
+      <!-- TODO: replace with the real repository URL once it's pushed to GitHub -->
+      <p><a href="https://github.com/REPLACE_ME/nxgenqr">View source on GitHub</a></p>
+    </footer>
+  </main>
+
+  <script src="js/vendor/qrcode-generator.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
